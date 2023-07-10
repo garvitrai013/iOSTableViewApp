@@ -46,6 +46,9 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let city = cities[indexPath.row]
+        let country = countries[city]
+        print("\(city) - \(country ?? "")")
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
